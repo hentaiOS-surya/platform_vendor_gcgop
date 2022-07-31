@@ -23,7 +23,7 @@ android_app_import {
     dex_preopt: {
         enabled: false,
     },
-    priviledged: true,
+    privileged: true,
     product_specific: true,
     overrides: ["Camera2", "Snap", "GoogleCameraGo", "GCamGOPrebuilt", "GCamGOPrebuilt-V2", "GCamGOPrebuilt-V3"],
 }

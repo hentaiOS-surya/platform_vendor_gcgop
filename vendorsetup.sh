@@ -1,3 +1,5 @@
+echo -ne "\033[2K" ; printf "\r"
+
 if [ -z "$GCGOP_VENDOR_DIR" ]; then
 
     # Use a reliable method to get what shell we're on
@@ -32,4 +34,4 @@ if [ -z "$TOP" ]; then
     export TOP="$(pwd)"
 fi
 
-export GCGOP_VENDOR_DIR="$(realpath --relative-to="$TOP" "$CUSTOM_VENDOR_DIR")"
+export GCGOP_VENDOR_DIR="$(realpath --relative-to="$TOP" "$GCGOP_VENDOR_DIR")"
