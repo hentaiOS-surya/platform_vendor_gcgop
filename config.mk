@@ -12,11 +12,13 @@
 # See the License for the specific language governing permissions and
 # limitations under the License.
 
-PRODUCT_SOONG_NAMESPACES += \
-    $(GCGOP_VENDOR_DIR)
+ifeq ($(TARGET_SUPPORTS_64_BIT_APPS), true)
+    PRODUCT_SOONG_NAMESPACES += $(GCGOP_VENDOR_DIR)
 
-PRODUCT_PACKAGES += \
-    KasumiGCGOP
+    PRODUCT_PACKAGES += KasumiGCGOP
 
-PRODUCT_COPY_FILES += \
-    $(GCGOP_VENDOR_DIR)/lily_experience.xml:$(TARGET_COPY_OUT_PRODUCT)/etc/sysconfig/lily_experience.xml
+    PRODUCT_COPY_FILES += $(GCGOP_VENDOR_DIR)/lily_experience.xml:$(TARGET_COPY_OUT_PRODUCT)/etc/sysconfig/lily_experience.xml
+else
+    $(warning Device is 32-bit but you have chosen to ship GCGOP, which is 64-bit.)
+    $(warning Not shipping Kasumi GCGOP.)
+endif
