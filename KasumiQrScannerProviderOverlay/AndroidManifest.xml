@@ -1,0 +1,8 @@
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="xyz.projectkasumi.qr_code_scanner_provider_overlay">
+
+    <overlay
+        android:isStatic="true"
+        android:priority="800"
+        android:targetPackage="android" />
+</manifest>
