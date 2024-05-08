@@ -19,7 +19,7 @@ android_app_import {
     name: "KasumiGCGOP",
     owner: "google",
     apk: "GoogleCameraGoPrebuilt.apk",
-    presigned: true,
+	certificate: "platform",
     dex_preopt: {
         enabled: false,
     },
