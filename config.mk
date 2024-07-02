@@ -12,6 +12,7 @@
 # See the License for the specific language governing permissions and
 # limitations under the License.
 
+GCGOP_VENDOR_DIR := vendor/gcgop
 ifeq ($(TARGET_SUPPORTS_64_BIT_APPS), true)
     PRODUCT_SOONG_NAMESPACES += $(GCGOP_VENDOR_DIR)
 
